@@ -14,6 +14,10 @@ const landStatus = require('./routes/landStatus')
 const loginRouter = require('./routes/login')
 const jwtMw = require('./middleware/jwtMw')
 
+const nacos= require('./service')
+
+nacos.register()
+
 // error handler
 onerror(app)
 // 设置跨域
